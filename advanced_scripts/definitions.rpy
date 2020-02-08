@@ -1,9 +1,3 @@
-#This is a copy of definitions.rpy from DDLC.
-#Use this as a starting point if you would like to override with your own.
-
-#Explanation for Definitions
-#This section defines stuff for the game: sprite poses for the girls, music, and backgrounds
-#If you plan on adding new content, pop them over down there and mimic the appropriate lines!
 define persistent.demo = False
 define persistent.steam = False
 define config.developer = True #Change this flag to True to enable dev tools
@@ -56,68 +50,55 @@ init python:
         renpy.pause(time)
         _windows_hidden = False
 
-#Music
-#The Music section is where you can reference existing DDLC audio
-
-#You'll see this in some existing scripts as command 'play music [t1]' for example
-#For easier reference, there are comments next to it so you can go DJ on the mod :)
 define audio.t1 = "<loop 22.073>bgm/1.ogg"  #Main theme (title)
 
 
-define audio.t2 = "<loop 4.499>bgm/2.ogg"   #Sayori theme
+define audio.t2 = "<loop 4.499>bgm/2.ogg"   
 define audio.t2air = "<loop 4.499>mod_assets/caudio/t2air.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
 define audio.t2g3 = "<loop 4.492>bgm/2g2.ogg"
-define audio.t3 = "<loop 4.618>bgm/3.ogg"   #Main theme (in-game)
+define audio.t3 = "<loop 4.618>bgm/3.ogg"   
 define audio.t3as = "<loop 4.618>mod_assets/caudio/t3as.ogg"
 define audio.t3g = "<to 15.255>bgm/3g.ogg"
 define audio.t3g2 = "<from 15.255 loop 4.618>bgm/3.ogg"
 define audio.t3g3 = "<loop 4.618>bgm/3g2.ogg"
 define audio.t3m = "<loop 4.618>bgm/3.ogg"
-define audio.t4 = "<loop 19.451>bgm/4.ogg"  #Poem minigame
+define audio.t4 = "<loop 19.451>bgm/4.ogg"  
 define audio.t4g = "<loop 1.000>bgm/4g.ogg"
 
-define audio.t5 = "<loop 4.444>bgm/5.ogg"   #Sharing poems...... 'Okay Everyone~!'
+define audio.t5 = "<loop 4.444>bgm/5.ogg"   
 #Hey Mod team, our themes aren't defined here in the original script.
 #Did some reading around and there was this + "_character" reference elsewhere.
 #Anyhow, I'll try 'defining' them and see if it works!
 
-define audio.tmonika = "<loop 4.444>bgm/5_monika.ogg" #I'm the only one with pianos x3
-define audio.tsayori = "<loop 4.444>bgm/5_sayori.ogg" #Hxppy Thoughts with Ukelele & Snapping~!
-define audio.tnatsuki = "<loop 4.444>bgm/5_natsuki.ogg" #Was it always cute on purpose?
-define audio.tyuri = "<loop 4.444>bgm/5_yuri.ogg" #Fancy harps and instruments!
-
-#Yeah, Monika... that should be good.
-#So, take it from her and if you want to define music, make sure it exists in the appropriate folder
-#Define its "audio.name" and see how it goes! (this should always be .ogg too, I think)
+define audio.tmonika = "<loop 4.444>bgm/5_monika.ogg" 
+define audio.tsayori = "<loop 4.444>bgm/5_sayori.ogg" 
+define audio.tnatsuki = "<loop 4.444>bgm/5_natsuki.ogg"
+define audio.tyuri = "<loop 4.444>bgm/5_yuri.ogg" 
 
 define audio.t5b = "<loop 4.444>bgm/5.ogg"
 define audio.t5c = "<loop 4.444>bgm/5.ogg"
-define audio.t6 = "<loop 10.893>bgm/6.ogg"  #Yuri/Natsuki theme
+define audio.t6 = "<loop 10.893>bgm/6.ogg" 
 define audio.t6g = "<loop 10.893>bgm/6g.ogg"
 define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
 define audio.t6s = "<loop 43.572>bgm/6s.ogg"
-define audio.t7 = "<loop 2.291>bgm/7.ogg"   #Causing trouble
+define audio.t7 = "<loop 2.291>bgm/7.ogg"  
 define audio.t7a = "<loop 4.316 to 12.453>bgm/7.ogg"
 define audio.t7g = "<loop 31.880>bgm/7g.ogg"
-define audio.t8 = "<loop 9.938>bgm/8.ogg"   #Trouble resolved
+define audio.t8 = "<loop 9.938>bgm/8.ogg" 
 define audio.t8xgon = "<loop 9.938>mod_assets/caudio/t8xgon.ogg"
-define audio.t9 = "<loop 3.172>bgm/9.ogg"   #Emotional
-define audio.t9g = "<loop 1.532>bgm/9g.ogg" #207% speed
-define audio.t10 = "<loop 5.861>bgm/10.ogg"   #Confession
+define audio.t9 = "<loop 3.172>bgm/9.ogg" 
+define audio.t9g = "<loop 1.532>bgm/9g.ogg" 
+define audio.t10 = "<loop 5.861>bgm/10.ogg" 
 define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
-define audio.lpn = "<to 184.4 loop 3.47>mod_assets/caudio/lpn.ogg" #Linkin Park - Numb
-define audio.ev = "<to 135.6 loop 0.6>mod_assets/caudio/ev.ogg" #Exile Vilify
-define audio.lpni = "<to 183.0 loop 2.0>mod_assets/caudio/lpni.ogg" #Linkin Park - Numb (Instrumental)
-define audio.scd = "mod_assets/caudio/scd.ogg" #Sonic CD Boss theme.... 'WELCOME TO HELL'
-define audio.lpend = "<to 195.4 loop 1.2>mod_assets/caudio/lpend.ogg" #Linkin Park - In the End
-define audio.lpendear = "<to 195.4 loop 1.2>mod_assets/caudio/lpendear.ogg" # Linkin Park - In the End Earrape
-define audio.butt = "mod_assets/caudio/butt.ogg" #Suprise Butsex... Umm ok?
-define audio.pirate = "<to 79.991 loop 7.29>mod_assets/caudio/pirate.ogg" #Diddy Kong Racing - Pirate Lagoon.... "UNDERSTANDABLE, HAVE A NICE DAY."
-define audio.tunak = "<to 221.544 loop 11.9>mod_assets/caudio/tunak.ogg" #what the fuck
-define audio.b0ss = "<to 12.105 loop 0>mod_assets/caudio/b0ss.ogg" #GIBE DE PUSI B0SS
+define audio.ev = "<to 135.6 loop 0.6>mod_assets/caudio/ev.ogg" 
+define audio.scd = "mod_assets/caudio/scd.ogg" 
+define audio.butt = "mod_assets/caudio/butt.ogg" 
+define audio.pirate = "<to 79.991 loop 7.29>mod_assets/caudio/pirate.ogg"
+define audio.tunak = "<to 221.544 loop 11.9>mod_assets/caudio/tunak.ogg" 
+define audio.b0ss = "<to 12.105 loop 0>mod_assets/caudio/b0ss.ogg" 
 define audio.goron = "<to 87.794 loop 8.476>mod_assets/caudio/goron.ogg"
 define audio.ppz = "<to 106.75 loop 25.721>mod_assets/caudio/ppz.ogg"
 define audio.bobross = "mod_assets/caudio/bobross.ogg"
@@ -125,7 +106,7 @@ define audio.fnaf = "mod_assets/caudio/fnaf.ogg"
 define audio.bobross2 = "mod_assets/caudio/bobross2.ogg"
 define audio.bitch = "mod_assets/caudio/bitch.ogg"
 define audio.lullaby = "<to 109.838 loop 0.189>mod_assets/caudio/lullaby.ogg"
-define audio.loud = "<to 52.002 loop 47.439>mod_assets/sfx/loud.ogg" #My ears are bleeding
+define audio.loud = "<to 52.002 loop 47.439>mod_assets/sfx/loud.ogg" 
 define audio.beatmania = "mod_assets/caudio/beatmania.ogg"
 define audio.sotl = "mod_assets/caudio/sotl.ogg"
 define audio.pizzicato = "mod_assets/caudio/pizzicato.ogg"
@@ -141,8 +122,8 @@ define audio.onekhz = "mod_assets/caudio/1khz.ogg"
 define audio.inferno = "<to 62.047 loop 7.392>mod_assets/caudio/inferno.ogg"
 
 
-define audio.m1 = "<loop 0>bgm/m1.ogg" #Monika and her spaceroom music
-define audio.mend = "<loop 6.424>bgm/monika-end.ogg" #Monika music post-deletion
+define audio.m1 = "<loop 0>bgm/m1.ogg"
+define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
 define audio.g1 = "<loop 0>bgm/g1.ogg"
@@ -978,8 +959,6 @@ image mc 5shock = im.Composite((960, 960), (0, 0), "mod_assets/mc/3.png", (0, 0)
 image mc 5error = im.Composite((960, 960), (0, 0), "mod_assets/mc/3.png", (0, 0), "mod_assets/mc/error.png")
 image mc 5error2 = im.Composite((960, 960), (0, 0),"mod_assets/mc/3.png", (0, 0), "mod_assets/mc/error1.png")
 
-#------------------------------------------------From hereon, the girl's bodies are defined along with their heads.
-#-----------------------------------------here's reference for the left half------the right half--------the head
 # Sayori
 image sayori 1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png")
 
@@ -1930,7 +1909,6 @@ image yuri dragon:
     xoffset 0
     "yuri 3"
 
-#------------------------------------------------Our beloved Monika only has her school uniform here, but that can change!
 
 # Just Monika
 image monika 1 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "monika/a.png")
@@ -2061,7 +2039,6 @@ image monika g2:
     repeat
 
 ###### Character Variables ######
-# These configure the shortcuts for writing dialog for each character.
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', image='mc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -2074,8 +2051,6 @@ define SANS = Character('Sans', what_prefix='"', what_suffix='"')
 define _dismiss_pause = config.developer
 
 ###### Persistent Variables ######
-# These values are automatically loaded/saved on game start and exit.
-# These exist across all saves
 
 default persistent.playername = ""
 default player = ""
@@ -2096,7 +2071,6 @@ default persistent.firstsans = True
 default persistent.ch2_both = None
 
 ###### Other global variables ######
-# It's good practice to define global variables here, just so you know what you can call later
 
 default in_sayori_kill = None
 default in_yuri_kill = None
@@ -2113,54 +2087,47 @@ default m_name = "Monika"
 default n_name = "Natsuki"
 default y_name = "Yuri"
 
-# Instantiating variables for poem appeal. This is how much each character likes the poem for each day.
-# -1 = Dislike, 0 = Neutral, 1 = Like
 default n_poemappeal = [0, 0, 0]
 default s_poemappeal = [0, 0, 0]
 default y_poemappeal = [0, 0, 0]
 default m_poemappeal = [0, 0, 0]
 
-# The last winner of the poem minigame.
+
 default poemwinner = ['sayori', 'sayori', 'sayori']
 
-# Keeping track of who read your poem when you're showing it to each of the girls.
+
 default s_readpoem = False
 default n_readpoem = False
 default y_readpoem = False
 default m_readpoem = False
 
-# Used in poemresponse_start because it's easier than checking true/false on everyone's read state.
+
 default poemsread = 0
 
-# The main appeal points. Whoever likes your poem the most gets an appeal point for that chapter.
-# Appeal points are used to keep track of which exclusive scene to show each chapter.
 default n_appeal = 0
 default s_appeal = 0
 default y_appeal = 0
 default m_appeal = 0
-
-# We keep track of whether we watched Natsuki's and sayori's second exclusive scenes
-# to decide whether to play them in chapter 3.
 default n_exclusivewatched = False
 default y_exclusivewatched = False
 
-# Yuri runs away after the first exclusive scene of playthrough 2.
+
 default y_gave = False
 default y_ranaway = False
 
-# We choose who to side with in chapter 1.
+=
 default ch1_choice = "sayori"
 
-# If we choose to help Sayori in ch3, some of the dialogue changes.
+
 default help_sayori = None
 default help_monika = None
 
-# We choose who to spend time with in chapter 4.
+
 default ch4_scene = "yuri"
 default ch4_name = "Yuri"
 default sayori_confess = True
 
-# We read Natsuki's confession poem in chapter 23.
+
 default natsuki_23 = None
 
 transform dalpha():
