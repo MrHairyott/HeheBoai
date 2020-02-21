@@ -1,21 +1,15 @@
-## splash screen is first thing that gets shown to player
 init -100 python:
 
-    # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
             renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
 
-# disclaimers
 init python:
     menu_trans_time = 1
 
     splash_message_default = "( Not affiliated with Team Salvato nor Toby Fox. )\n( Just a Fan work. )"
 
-    splash_messages = [
-        "Nigga",
-        "R.I.P Etika"
-    ]
+    splash_messages = []
 
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
@@ -677,7 +671,4 @@ label clearscreens:
     return
     
 label quit:
-
-    # stuff that happens when the game closes
-
     return
